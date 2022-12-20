@@ -1,13 +1,13 @@
 const { urlencoded } = require('express');
 const express = require('express');
-const router = require('./router2');
+const router = require('./router');
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
-app.set("view engine", "hbs");
-app.set("views", "./views");
+app.set("view engine", "pug");
+app.set("views", "./pug/views");
 
 app.use("/", router);
 

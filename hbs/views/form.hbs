@@ -1,0 +1,36 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Productos</title>
+        <link href="https://bootswatch.com/5/superhero/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body class="p-4">
+        <section class="p-4 bg-secondary">
+            <h2 class="text-primary">Ingrese Producto</h2>
+            <form action='/products' method='POST'>
+                <div class='mb-3'>
+                    <label class='form-label fw-bold' for='title'>Nombre</label>
+                    <input class="form-control" type='text' name='title' />
+                </div>
+                <div class='mb-3'>
+                    <label class='form-label fw-bold' for='price'>Precio</label>
+                    <input class="form-control" type='number' name='price' />
+                </div>
+                <div class='mb-3'>
+                    <label class='form-label fw-bold' for='url'>Foto URL</label>
+                    <input class="form-control" type='url' name='url' />
+                </div>
+                <div class='mb-3'>
+                    <input class="btn btn-success" type='submit' value='Enviar' />
+                </div>
+            </form>
+            <div>
+                <a href="./products">
+                    <button class="btn btn-warning">Ver Productos</button>
+                </a>
+            </div>
+        </section>
+    </body>
+</html>

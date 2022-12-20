@@ -1,0 +1,31 @@
+doctype html
+html(lang='es')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title= Cargadeproductos
+        link(href="https://bootswatch.com/5/sketchy/bootstrap.min.css" rel="stylesheet")
+    body.p-4
+        section.p-4.bg-secondary
+            h2.text-primary Vista de Productos
+            if products.length===0
+                div.mt-4
+                h2.bg-light.p-4.text-danger No se encontraron productos
+            else
+                table.table.table-dark
+                    thead
+                        tr
+                            th Nombre
+                            th Precio
+                            th Foto
+                    tbody
+                        each product in products
+                            tr.text-center
+                                td.align-middle= product.title
+                                td.align-middle= product.price
+                                td.align-middle
+                                    img(src=product.thumbnail alt=product.title)
+            div.mt-3
+            a(href="./")
+                button.btn.btn-warning Agregar producto
